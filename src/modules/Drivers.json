@@ -1,0 +1,22 @@
+[
+  { "id": 1, "name": "Ali", "lat": 52.370216, "lon": 4.895168, "rating": 4.8, "ratePerKm": 1.5 },
+  { "id": 2, "name": "Fatima", "lat": 51.9225, "lon": 4.47917, "rating": 4.6, "ratePerKm": 1.6 },
+  { "id": 3, "name": "Mohammed", "lat": 52.1583, "lon": 4.4931, "rating": 4.7, "ratePerKm": 1.4 },
+  { "id": 4, "name": "Sara", "lat": 52.308056, "lon": 4.764167, "rating": 4.9, "ratePerKm": 1.7 },
+  { "id": 5, "name": "Omar", "lat": 52.2916, "lon": 4.6909, "rating": 4.5, "ratePerKm": 1.5 },
+  { "id": 6, "name": "Yasmin", "lat": 52.0705, "lon": 4.3007, "rating": 4.8, "ratePerKm": 1.6 },
+  { "id": 7, "name": "Hassan", "lat": 52.0907, "lon": 5.1214, "rating": 4.7, "ratePerKm": 1.5 },
+  { "id": 8, "name": "Layla", "lat": 52.3874, "lon": 4.6462, "rating": 4.9, "ratePerKm": 1.6 },
+  { "id": 9, "name": "Karim", "lat": 52.0705, "lon": 4.3007, "rating": 4.6, "ratePerKm": 1.5 },
+  { "id": 10, "name": "Zahra", "lat": 52.3676, "lon": 4.9041, "rating": 4.8, "ratePerKm": 1.7 },
+  { "id": 11, "name": "Ibrahim", "lat": 51.9244, "lon": 4.4777, "rating": 4.5, "ratePerKm": 1.6 },
+  { "id": 12, "name": "Noor", "lat": 52.1583, "lon": 4.4931, "rating": 4.9, "ratePerKm": 1.5 },
+  { "id": 13, "name": "Samir", "lat": 52.308056, "lon": 4.764167, "rating": 4.7, "ratePerKm": 1.6 },
+  { "id": 14, "name": "Amal", "lat": 52.2916, "lon": 4.6909, "rating": 4.8, "ratePerKm": 1.4 },
+  { "id": 15, "name": "Bilal", "lat": 52.0705, "lon": 4.3007, "rating": 4.5, "ratePerKm": 1.5 },
+  { "id": 16, "name": "Nadia", "lat": 52.0907, "lon": 5.1214, "rating": 4.9, "ratePerKm": 1.7 },
+  { "id": 17, "name": "Jamal", "lat": 52.3874, "lon": 4.6462, "rating": 4.6, "ratePerKm": 1.6 },
+  { "id": 18, "name": "Salma", "lat": 52.3676, "lon": 4.9041, "rating": 4.8, "ratePerKm": 1.5 },
+  { "id": 19, "name": "Ahmed", "lat": 51.9225, "lon": 4.47917, "rating": 4.7, "ratePerKm": 1.6 },
+  { "id": 20, "name": "Huda", "lat": 52.1583, "lon": 4.4931, "rating": 4.9, "ratePerKm": 1.5 }
+]
