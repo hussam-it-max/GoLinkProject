@@ -47,17 +47,7 @@ sortByNearestEl.addEventListener('click',()=>{
     filterDrivers(drivers,'distanceToCustomer');
 
 })
-const submitBtn=document.getElementById('submitButton');
-const modal=creatPymentModal();
-const close=document.querySelector('close');
-submitBtn.addEventListener('click',()=>{
-    modal.style.display='block';
-    document.body.appendChild(modal);
-})
-close.addEventListener('click',()=>{
-    const model=document.getElementById('modal');
-    model.style.display='none';
-})
+
 
     const buttonSearch=document.getElementById('button-search');
     buttonSearch.addEventListener('click',()=>{
