@@ -61,14 +61,13 @@ The app allows users to enter pickup and destination locations, displays routes 
 ---
 
 ## Setup & Usage
-
-1. Make sure you have a web server to run the app (e.g. live-server or serve).  
-2. Open the main HTML file that loads `home.js` and the necessary modules.  
-3. Enter pickup and destination locations using the search boxes.  
-4. Click **Search** to display the route and available drivers on the map.  
-5. Use the **Sort by Price** or **Sort by Rating** buttons to reorder the driver list.  
-6. Click **Submit** next to a driver to open the payment modal and simulate payment.  
-7. Payment success or failure messages will be shown accordingly.
+ 
+1. Open the main HTML file that loads `homepage.js` and the necessary modules.  
+2. Enter pickup and destination locations using the search boxes.  
+3. Click **Search** to display the route and available drivers on the map.  
+4. Use the **Sort by Price** or **Sort by Rating** buttons to reorder the driver list.  
+5. Click **Submit** next to a driver to open the payment modal and simulate payment.  
+6. Payment success or failure messages will be shown accordingly.
 
 ---
 
