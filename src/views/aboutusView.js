@@ -1,7 +1,7 @@
-export const creatAboutusPage=()=>{
-    const div= document.createElement('div');
-    div.classList.add('about-container');
-    div.innerHTML=String.raw`
+export const creatAboutusPage = () => {
+  const div = document.createElement("div");
+  div.classList.add("about-container");
+  div.innerHTML = String.raw`
         <div class="title-about" id="aboutUs">
         <h1>About Us</h1>
     </div>
@@ -16,5 +16,5 @@ export const creatAboutusPage=()=>{
                 alt="">
         </div>
         </div>`;
-        return div;
-}
+  return div;
+};
