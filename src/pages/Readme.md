@@ -24,8 +24,6 @@
 
 ---
 
-## 📂 /pages
-
 ### handelEvent.js
 Handles **all user events**:
 
