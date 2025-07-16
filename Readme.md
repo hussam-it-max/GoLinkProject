@@ -41,20 +41,23 @@ The app allows users to enter pickup and destination locations, displays routes 
 
 ```bash
 /pages
-├── home.js # Main page script initializing map and UI
+├── homepage.js # Main page script initializing map and UI
 ├── mapPage.js # Map initialization and interaction
 ├── handelRequest.js # Handles API requests (search, route, drivers)
 ├── handelEvent.js # Handles user events and interactions
 ├── filterDrivers.js # Logic for filtering and sorting drivers
 ├── errorPage.js # Displays error messages
 ├── paymentProcess.js # Simulates payment modal and process
+├── handelLocation # to fetch users'location
+├── cratMarkers.js # add markers for location and destinations
 
 /views
 ├── driverView.js # Renders driver list items
 ├── mapView.js # Renders map markers and routes
-├── paymentModal.js # Creates payment modal HTML
+├── paymentView.js # Creates payment modal HTML
 ├── searchBox.js # Creates search input boxes
-├── spinnerView.js # Loading spinner UI
+├── loadingView.js # add spinner during reload data
+
 
 /modules
 └── Drivers.json # Static driver data

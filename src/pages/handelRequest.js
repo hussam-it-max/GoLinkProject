@@ -1,3 +1,6 @@
+const API_KEY =
+  "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6Ijg2NDc0YjE3YmE3NDRhMGRhMDEzN2I3NzczZDA0ZmI3IiwiaCI6Im11cm11cjY0In0=";
+
 import { InitResultsPage } from "./resultsPage.js";
 import { showError } from "./errorPage.js";
 import { removeLoadingElement } from "../views/loadingView.js";
@@ -29,7 +32,7 @@ export const fetchData = async (query) => {
 
 async function getDestance(originLon, originLat, desLon, desLat) {
   const response = await fetch(
-    `https://api.openrouteservice.org/v2/directions/driving-car?api_key=eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6Ijg2NDc0YjE3YmE3NDRhMGRhMDEzN2I3NzczZDA0ZmI3IiwiaCI6Im11cm11cjY0In0=&start=${originLon},${originLat}&end=${desLon},${desLat}`
+    `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${API_KEY}&start=${originLon},${originLat}&end=${desLon},${desLat}`
   );
   if (!response.ok) {
     if (response.status === 404) {
@@ -123,8 +126,6 @@ async function fetchDrivers() {
 }
 
 async function getDriversToCustomerMatrix(originLon, originLat, drivers) {
-  const apiKey =
-    "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6Ijg2NDc0YjE3YmE3NDRhMGRhMDEzN2I3NzczZDA0ZmI3IiwiaCI6Im11cm11cjY0In0=";
   const locations = [
     [originLon, originLat],
     ...drivers.map((driver) => [driver.lon, driver.lat]),
@@ -140,7 +141,7 @@ async function getDriversToCustomerMatrix(originLon, originLat, drivers) {
     {
       method: "POST",
       headers: {
-        Authorization: apiKey,
+        Authorization: API_KEY,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
