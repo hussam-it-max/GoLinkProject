@@ -7,6 +7,7 @@ import { getSuggestion } from "./handelRequest.js";
 import { renderSuggestions } from "./handelRequest.js";
 import { creatLodingElement } from "../views/loadingView.js";
 import { fetchLocation } from "./handelLocation.js";
+import { handleSearchError } from "./errorPage.js";
 
 export const initHomePage = () => {
   const userInterface = document.getElementById("userInterface");
@@ -32,15 +33,7 @@ export const initHomePage = () => {
         renderSuggestions(results, pickupList);
       } catch (error) {
         console.error(error);
-        if (error.message.includes("NOT_FOUND")) {
-          showError(
-            "Oops Could not find results. Please check your locations."
-          );
-        } else if (error.message.includes("SERVER_ERROR")) {
-          showError("Server error. Please try again later");
-        } else {
-          showError("Network error. Please check your connection.");
-        }
+        handleSearchError();
       }
     }, 250);
   });
@@ -57,15 +50,7 @@ export const initHomePage = () => {
         renderSuggestions(results, dropoffList);
       } catch (error) {
         console.error(error);
-        if (error.message.includes("NOT_FOUND")) {
-          showError(
-            "Oops Could not find results. Please check your locations."
-          );
-        } else if (error.message.includes("SERVER_ERROR")) {
-          showError("Server error. Please try again later");
-        } else {
-          showError("Network error. Please check your connection.");
-        }
+        handleSearchError(error);
       }
     }, 250);
   });

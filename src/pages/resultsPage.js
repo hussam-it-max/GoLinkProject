@@ -11,6 +11,8 @@ import { creatPymentModal } from "../views/pymentView.js";
 import { getCoordinates } from "./handelRequest.js";
 import { simulatePayment, showLoading, hideLoading } from "./paymentProcess.js";
 import { attachSubmitListeners } from "./handelEvent.js";
+import { handleSearchError } from "./errorPage.js";
+import { creatLodingElement } from "../views/loadingView.js";
 
 export const InitResultsPage = async (
   originLat,
@@ -61,6 +63,8 @@ export const InitResultsPage = async (
 
   const buttonSearch = document.getElementById("button-search");
   buttonSearch.addEventListener("click", () => {
+    const loadingElement = creatLodingElement();
+    document.body.appendChild(loadingElement);
     getCoordinates();
   });
 };

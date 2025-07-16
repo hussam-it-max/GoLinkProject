@@ -38,6 +38,8 @@ The app allows users to enter pickup and destination locations, displays routes 
 ---
 
 ## File Structure Overview
+
+```bash
 /pages
 ├── home.js # Main page script initializing map and UI
 ├── mapPage.js # Map initialization and interaction
@@ -56,7 +58,7 @@ The app allows users to enter pickup and destination locations, displays routes 
 
 /modules
 └── Drivers.json # Static driver data
-
+```
 
 ---
 

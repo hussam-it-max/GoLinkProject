@@ -2,6 +2,7 @@ import { InitResultsPage } from "./resultsPage.js";
 import { showError } from "./errorPage.js";
 import { removeLoadingElement } from "../views/loadingView.js";
 import { getMap } from "./mapPage.js";
+import { handleSearchError } from "./errorPage.js";
 
 export const fetchData = async (query) => {
   const link = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(
@@ -87,13 +88,7 @@ export const getCoordinates = async () => {
   } catch (error) {
     removeLoadingElement();
     console.error(error);
-    if (error.message.includes("NOT_FOUND")) {
-      showError("Oops Could not find results. Please check your locations.");
-    } else if (error.message.includes("SERVER_ERROR")) {
-      showError("Server error. Please try again later");
-    } else {
-      showError("Network error. Please check your connection.");
-    }
+    handleSearchError(error);
   }
 };
 
@@ -172,7 +167,6 @@ export const getSuggestion = async (query) => {
   }
 
   const data = await response.json();
-  console.log(data);
   return data;
 };
 export const renderSuggestions = (suggestions, suggestionsList) => {
@@ -192,8 +186,6 @@ function setDriverOnMap(drivers) {
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
   });
-  console.log(drivers);
-
   drivers.forEach((driver) => {
     L.marker([driver.lat, driver.lon], { icon: carIcon })
       .addTo(map)

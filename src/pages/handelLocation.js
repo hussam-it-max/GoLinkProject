@@ -22,7 +22,6 @@ export const fetchLocation = async () => {
     }
   }
   const result = await response.json();
-  console.log(result);
   const inputLocation = document.getElementById("inputLocation");
   inputLocation.value = result.display_name;
 };
